@@ -1,6 +1,6 @@
-package entity.primary;
+package com.org.custom_springboot_template.entity.primary;
 
-import entity.security.Role;
+import com.org.custom_springboot_template.entity.security.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

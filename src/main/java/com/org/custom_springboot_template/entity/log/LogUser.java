@@ -1,7 +1,7 @@
 package com.org.custom_springboot_template.entity.log;
 
+import com.org.custom_springboot_template.entity.primary.User;
 import com.org.custom_springboot_template.product.enums.ProductEnumTransactionTypes;
-import entity.primary.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

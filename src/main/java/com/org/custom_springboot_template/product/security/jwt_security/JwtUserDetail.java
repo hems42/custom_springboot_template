@@ -1,6 +1,6 @@
 package com.org.custom_springboot_template.product.security.jwt_security;
 
-import entity.primary.User;
+import com.org.custom_springboot_template.entity.primary.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

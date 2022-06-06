@@ -1,8 +1,8 @@
 package com.org.custom_springboot_template.product.dto;
 
+import com.org.custom_springboot_template.entity.primary.User;
+import com.org.custom_springboot_template.entity.security.Role;
 import com.org.custom_springboot_template.product.enums.ProductEnumTransactionTypes;
-import entity.primary.User;
-import entity.security.Role;
 
 import java.time.LocalDateTime;
 

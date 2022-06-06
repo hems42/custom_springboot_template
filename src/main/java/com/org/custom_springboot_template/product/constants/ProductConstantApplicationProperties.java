@@ -1,4 +1,4 @@
-package product.constants;
+package com.org.custom_springboot_template.product.constants;
 
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;

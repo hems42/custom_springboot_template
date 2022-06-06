@@ -1,7 +1,7 @@
 package com.org.custom_springboot_template.product.dto_convertor.primary_convertor;
 
+import com.org.custom_springboot_template.entity.primary.User;
 import com.org.custom_springboot_template.product.dto.UserDto;
-import entity.primary.User;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;

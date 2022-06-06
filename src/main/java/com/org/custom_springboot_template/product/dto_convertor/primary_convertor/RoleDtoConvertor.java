@@ -1,7 +1,7 @@
 package com.org.custom_springboot_template.product.dto_convertor.primary_convertor;
 
+import com.org.custom_springboot_template.entity.security.Role;
 import com.org.custom_springboot_template.product.dto.RoleDto;
-import entity.security.Role;
 import org.springframework.stereotype.Component;
 
 @Component

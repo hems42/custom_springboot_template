@@ -23,10 +23,10 @@ public class BaseExceptionModel extends RuntimeException implements Serializable
 	    private CoreEnumExceptionMessages coreEnumExceptionMessages;
 
 	    public BaseExceptionModel(CoreEnumExceptionMessages coreEnumExceptionMessages,
-	                              String baseErrorCode,
-	                              String errorDetailCode, 
-	                              String errorDescription,
-	                              HttpStatus baseStatusCode) {
+								  String baseErrorCode,
+								  String errorDetailCode,
+								  String errorDescription,
+								  HttpStatus baseStatusCode) {
 	        super(errorDescription); 
 	        this.coreEnumExceptionMessages = coreEnumExceptionMessages;
 	        errorTopicCode = coreEnumExceptionMessages.getExceptionCode();

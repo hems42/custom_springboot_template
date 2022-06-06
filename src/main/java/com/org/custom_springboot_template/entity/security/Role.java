@@ -1,4 +1,4 @@
-package entity.security;
+package com.org.custom_springboot_template.entity.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,10 +1,13 @@
 package com.org.custom_springboot_template.product.security.jwt_security;
 
+import com.org.custom_springboot_template.core.enums.CoreEnumExceptionMessages;
+import com.org.custom_springboot_template.core.exceptions.exceptionModels.NotFoundException;
+import com.org.custom_springboot_template.product.dto.UserDto;
+import com.org.custom_springboot_template.product.dto_convertor.primary_convertor.UserDtoConvertor;
+import com.org.custom_springboot_template.service.abstracts.IUserService;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.UserDetails;
-import product.dto.UserDto;
-import product.dto_convertor.primary_convertor.UserDtoConvertor;
 
 
 @Service
@@ -33,7 +36,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 
             return new JwtUserDetail(user); }
 
-        throw new NotFoundException(CoreEnumExceptionMessages.NOT_FOUND_USER,"not found user by token username");
+        throw new NotFoundException(CoreEnumExceptionMessages.D_NOT_FOUND_USER,"not found user by token username");
     }
 
 }
