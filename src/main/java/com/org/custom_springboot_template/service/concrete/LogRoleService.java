@@ -1,11 +1,11 @@
 package com.org.custom_springboot_template.service.concrete;
 
-import com.notebook_b.org.entity.leadRole.User;
-import com.notebook_b.org.entity.log.LogRole;
-import com.notebook_b.org.product.dto_convertor.log_convertor.LogRoleDtoConvertor;
-import com.notebook_b.org.product.request.createRequest.LogRoleRequestCreate;
-import com.notebook_b.org.repository.LogRoleDao;
-import com.notebook_b.org.service.abstracts.ILogRoleService;
+import com.org.custom_springboot_template.entity.log.LogRole;
+import com.org.custom_springboot_template.entity.primary.User;
+import com.org.custom_springboot_template.product.dto_convertor.log_convertor.LogRoleDtoConvertor;
+import com.org.custom_springboot_template.product.request.createRequest.LogRoleRequestCreate;
+import com.org.custom_springboot_template.repository.LogRoleDao;
+import com.org.custom_springboot_template.service.abstracts.ILogRoleService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

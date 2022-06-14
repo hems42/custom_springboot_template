@@ -1,6 +1,6 @@
 package com.org.custom_springboot_template.product.response;
 
-import entity.security.Role;
+import com.org.custom_springboot_template.entity.security.Role;
 
 import java.time.LocalDateTime;
 import java.util.Set;

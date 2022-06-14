@@ -2,6 +2,7 @@ package com.org.custom_springboot_template.service.concrete;
 
 import com.org.custom_springboot_template.core.enums.CoreEnumResponseMessages;
 import com.org.custom_springboot_template.core.enums.CoreEnumRoleTypes;
+import com.org.custom_springboot_template.core.exceptions.exceptionModels.NotFoundException;
 import com.org.custom_springboot_template.core.exceptions.exceptionModels.UnSuccessfulException;
 import com.org.custom_springboot_template.core.utilities.results.DataResult;
 import com.org.custom_springboot_template.core.utilities.results.SuccessDataResult;
@@ -12,6 +13,7 @@ import com.org.custom_springboot_template.product.dto_convertor.primary_converto
 import com.org.custom_springboot_template.product.enums.ProductEnumTransactionTypes;
 import com.org.custom_springboot_template.product.request.createRequest.LogRoleRequestCreate;
 import com.org.custom_springboot_template.product.request.createRequest.RoleRequestCreate;
+import com.org.custom_springboot_template.product.request.updateRequest.RoleRequestUpdate;
 import com.org.custom_springboot_template.repository.RoleDao;
 import com.org.custom_springboot_template.service.abstracts.IRoleService;
 import org.springframework.stereotype.Service;
@@ -50,14 +52,14 @@ public class RoleService implements IRoleService {
             Role foundRole = roleDao.save(role);
 
             logRoleService.addLogRole(new LogRoleRequestCreate(
-                    AppEnumOperationTypes.CREATED,
+                    ProductEnumTransactionTypes.CREATED,
                     foundRole
             ), user);
 
             return new SuccessDataResult(roleDtoConvertor.convert(foundRole),
                     CoreEnumResponseMessages.ROLE_SUCCESSFULLY_ADDED.toString());
         } else {
-            throw new UnSuccessfulException(UN_SUCCESSFUL_ROLE_CREATED, "cant created role");
+           return null;
         }
     }
 
@@ -82,8 +84,7 @@ public class RoleService implements IRoleService {
             return new SuccessDataResult(roleDtoConvertor.convert(foundRole),
                     CoreEnumResponseMessages.ROLE_SUCCESSFULLY_ADDED.toString());
         } else {
-            throw new UnSuccessfulException(UN_SUCCESSFUL_ROLE_CREATED, "cant created role");
-        }
+            return null;        }
     }
 
 
@@ -107,15 +108,7 @@ public class RoleService implements IRoleService {
 
     //UTIL
 
-    private Role util_getRoleByRole(Integer roleId) {
-        Role roleFound = roleDao.getById(roleId);
 
-        if (roleFound != null) {
-            return roleFound;
-        } else {
-            throw new NotFoundException(NOT_FOUND_ROLE, "not found role by ıd");
-        }
-    }
 
     private Role util_getRoleByRole(String roleName) {
 

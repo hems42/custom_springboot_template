@@ -1,7 +1,7 @@
 package com.org.custom_springboot_template.product.request.createRequest;
 
-import entity.security.Role;
-import product.enums.ProductEnumTransactionTypes;
+import com.org.custom_springboot_template.entity.security.Role;
+import com.org.custom_springboot_template.product.enums.ProductEnumTransactionTypes;
 
 public class LogRoleRequestCreate {
 

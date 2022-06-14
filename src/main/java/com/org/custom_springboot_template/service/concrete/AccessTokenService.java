@@ -1,5 +1,6 @@
 package com.org.custom_springboot_template.service.concrete;
 
+import com.org.custom_springboot_template.product.response.AccessTokenResponse;
 import com.org.custom_springboot_template.product.security.jwt_security.JwtTokenManager;
 import com.org.custom_springboot_template.service.abstracts.IAccessTokenService;
 import org.springframework.security.authentication.AuthenticationManager;
